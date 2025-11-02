@@ -23,8 +23,7 @@ Tudo isso com uma interface simples e amigável para os pequenos explorarem o mu
 ## 💻 Tecnologias utilizadas
 
 Este projeto foi desenvolvido com:
-- ⚡ **HTML5**  
-- 🎨 **CSS3**  
+
 - 🧠 **JavaScript**
   
 ---
