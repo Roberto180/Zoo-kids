@@ -16,7 +16,7 @@ Cada animal tem sua própria página com:
 - 💡 Curiosidades divertidas  
 - 🎨 Ilustrações fofas e coloridas  
 
-Tudo isso com uma interface simples e amigável para os pequenos explorarem o mundo animal com segurança e diversão! 🥰
+Tudo isso desenvolvido para mobile com uma interface simples e amigável para os pequenos explorarem o mundo animal com segurança e diversão! 🥰
 
 ---
 
