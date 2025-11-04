@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00C500',
+    backgroundColor: '#00e900ff',
   },
   
   v1: {
@@ -50,7 +50,7 @@ export default StyleSheet.create({
   },
 
   button: {
-    backgroundColor: '#F6F300',
+    backgroundColor: '#f60000ff',
     flexDirection: 'row',
     alignItems: 'center',
     paddingRight: 30,
@@ -70,7 +70,7 @@ export default StyleSheet.create({
   },
 
   logo: {
-    backgroundColor: '#ff0000ff',
+    backgroundColor: '#b90000ff',
     borderRadius: 100,
     padding: 40,
     width: 100,
