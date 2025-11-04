@@ -12,7 +12,7 @@ export default function Home() {
 
       {/* Territorio 1 */}
         <View style={styles.v1}>  
-          <Pressable style={styles.button} onPress={ () => navigation.navigate('Territorio')}>
+          <Pressable style={styles.button} onPress={ () => navigation.navigate('Territorio 1')}>
              <Image 
           style={styles.logo}
           source={require('../../../assets/leãozinho.png')}
