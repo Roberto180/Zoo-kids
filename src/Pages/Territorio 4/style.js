@@ -103,7 +103,6 @@ export default StyleSheet.create({
     color: '#333',
     lineHeight: 22,
     textAlign: 'left',
-    marginBottom: 15,
   },
 
   v3:{

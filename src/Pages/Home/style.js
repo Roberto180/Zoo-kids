@@ -3,78 +3,63 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00e900ff',
+    backgroundColor: '#FFF8E6',
+    paddingHorizontal: 12,
+    paddingTop: 12,
   },
   
-  v1: {
-    flex: 1,
-    justifyContent: 'center',
+  header: {
     alignItems: 'center',
-    flexDirection: 'row',
-    marginTop: 50,
+    marginBottom: 8,
+    paddingVertical: 8,
   },
 
-  v2: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
+  headerTitle: {
+    fontSize: 34,
+    fontWeight: '900',
+    color: '#b90000',
   },
 
-  v3: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
+  headerSubtitle: {
+    fontSize: 14,
+    color: '#4a4a4a',
+    marginTop: 4,
   },
 
-  v4: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  row: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 8,
   },
 
-  v5: {
-    flex: 1,
+  card: {
+    backgroundColor: '#ffffff',
+    width: '48%',
+    borderRadius: 18,
+    paddingVertical: 12,
+    paddingHorizontal: 6,
+    alignItems: 'center',
     justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-
-  v6: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-
-  button: {
-    backgroundColor: '#f60000ff',
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingRight: 30,
-    margin: 10,
-    borderRadius: 100,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+    elevation: 6,
   },
 
   textButton: {
-    color: '#ffffffff',
-    fontWeight: 'bold',
-    fontSize: 20,
-    marginLeft: 70,
-    letterSpacing: 2,
-    textShadowColor: '#000000',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 5,
+    color: '#222',
+    fontWeight: '800',
+    fontSize: 16,
+    marginTop: 8,
+    textAlign: 'center',
   },
 
   logo: {
-    backgroundColor: '#b90000ff',
-    borderRadius: 100,
-    padding: 40,
-    width: 100,
-    height: 100,
+    backgroundColor: '#fff',
+    borderRadius: 999,
+    width: 96,
+    height: 96,
   },
 
 })
