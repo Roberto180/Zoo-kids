@@ -1,5 +1,5 @@
 import { StatusBar} from 'expo-status-bar';
-import {View, Modal,Text, Pressable, Image, ScrollView} from 'react-native';
+import {View, Modal,Text, Pressable, Image, ScrollView, SafeAreaView, Alert} from 'react-native';
 import styles from './style';   
 import React, { useState } from 'react';
 
@@ -21,6 +21,7 @@ export default function Territorio1() {
   
   
   const AbrirModal = (value) => {
+
     setContador(value);
     setVisible(true);
     
@@ -33,64 +34,89 @@ export default function Territorio1() {
   return (
     <ScrollView style={styles.container}>
 
-        <Modal animationType="fade" visible={visible}>
-           
-            <View>
-              <Text>{animal[contador].nome}</Text>
-              <Image source={animal[contador].imagem} style={styles.imagem} />
-              <Text>{animal[contador].descricao}</Text>
-              <Pressable onPress={FecharModal}>
-                <Text>Fechar Modal</Text>
+        <Modal animationType="fade" visible={visible} transparent={true}>
+          <View style={styles.modalOverlay}>
+            <SafeAreaView style={styles.modalCard}>
+
+              <Pressable onPress={FecharModal} style={styles.closeButton} accessible={true} accessibilityLabel="Fechar">
+                <Text style={styles.closeButtonText}>✕</Text>
               </Pressable>
-            </View>
+
+              <View style={styles.v1}>
+                <Text style={styles.nomeAnimal}>{animal[contador].nome}</Text>
+                <Image source={animal[contador].imagem} style={styles.imagem} resizeMode="cover" />
+              </View>
+
+              <View style={styles.v2}>
+                <ScrollView>
+                  <Text style={styles.descricaoText}>{animal[contador].descricao}</Text>
+                </ScrollView>
+              </View>
+
+              <View style={styles.v3}>
+                <Pressable onPress={FecharModal} style={styles.button} UnderlayColor="#ff6b6b">
+                  <Text style={styles.buttonText}>Fechar</Text>
+                </Pressable>
+              </View>
+
+            </SafeAreaView>
+          </View>
         </Modal>
 
       
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>Território 1</Text>
+        <Text style={styles.headerSubtitle}>Toque no animal para saber mais</Text>
+      </View>
 
-        <Pressable onPress={() => AbrirModal(0)}>
-         <Image source={require('../../../assets/onca-5666405.jpg')} style={styles.img}
-         resizeMode='contain'
-         ></Image>
-        </Pressable>
-
-        <Pressable onPress={() => AbrirModal(1)} >
-         <Image source={require('../../../assets/')} style={styles.img}
-         resizeMode='contain'
-         ></Image>
+      <View style={styles.grid}>
+        <Pressable style={styles.card} onPress={() => AbrirModal(0)}>
+          <Image source={require('../../../assets/onca-5666405.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Onça Pintada</Text>
         </Pressable>
 
-        <Pressable onPress={() => AbrirModal(2)}>
-        <Image source={require('../../../assets/jacare.jpg')} style={styles.img}></Image>
+        <Pressable style={styles.card} onPress={() => AbrirModal(1)}>
+          <Image source={require('../../../assets/arara-azul.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Arara Azul</Text>
+        </Pressable>
+      
+        <Pressable style={styles.card} onPress={() => AbrirModal(2)}>
+          <Image source={require('../../../assets/jacare.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Jacaré</Text>
         </Pressable>
 
-        <Pressable onPress={() => AbrirModal(3)}>
-         <Image source={require('../../../assets/cagado.jpg')} style={styles.img}></Image>
+        <Pressable style={styles.card} onPress={() => AbrirModal(3)}>
+          <Image source={require('../../../assets/cagado.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Cágado</Text>
+        </Pressable>
+      
+        <Pressable style={styles.card} onPress={() => AbrirModal(4)}>
+          <Image source={require('../../../assets/elefante-africano.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Elefante</Text>
         </Pressable>
 
-        <Pressable onPress={() => AbrirModal(4)}>
-         <Image source={require('../../../assets/elefante-africano.jpg')} style={styles.img}></Image>
+        <Pressable style={styles.card} onPress={() => AbrirModal(5)}>
+          <Image source={require('../../../assets/flamingo.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Flamingo</Text>
+        </Pressable>
+      
+        <Pressable style={styles.card} onPress={() => AbrirModal(7)}>
+          <Image source={require('../../../assets/Quati.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Quati</Text>
         </Pressable>
 
-        <Pressable onPress={() => AbrirModal(5)}>
-         <Image source={require('../../../assets/flamingo.jpg')} style={styles.img}></Image>
+        <Pressable style={styles.card} onPress={() => AbrirModal(8)}>
+          <Image source={require('../../../assets/guara.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Guará</Text>
         </Pressable>
 
-        <Pressable onPress={() => AbrirModal(6)}>
-         <Image source={require('../../../assets/pequenos.jpg')} style={styles.img}></Image>
+        <Pressable style={styles.card} onPress={() => AbrirModal(9)}>
+          <Image source={require('../../../assets/iraras.jpg')} style={styles.cardImage} />
+          <Text style={styles.cardText}>Irara</Text>
         </Pressable>
-        
-        <Pressable onPress={() => AbrirModal(7)}>
-         <Image source={require('../../../assets/Quati.jpg')} style={styles.img}></Image>
-        </Pressable>
+        </View>
 
-        <Pressable onPress={() => AbrirModal(8)}>
-         <Image source={require('../../../assets/guara.jpg')} style={styles.img}></Image>
-        </Pressable>
-
-        <Pressable onPress={() => AbrirModal(9)}>
-         <Image source={require('../../../assets/iraras.jpg')} style={styles.img}></Image>
-        </Pressable>
-        
+        <View style={[styles.card, {backgroundColor: 'transparent', elevation: 0, shadowOpacity: 0}]} />
 
       <StatusBar style="auto" />
     </ScrollView>

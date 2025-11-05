@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "./src/Pages/Home";
-import Territorio from "./src/Pages/Territorio ";
+import Territorio1 from "./src/Pages/Territorio 1";
 import { Pressable } from "react-native";
 
 const Stack = createNativeStackNavigator();
